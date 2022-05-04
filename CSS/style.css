@@ -1,0 +1,172 @@
+:root{
+    --corDeFundo: rgb(173, 8, 8);
+    --corTexto: rgb(255, 255, 255);
+    --corButton: rgb(223, 2, 2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--corDeFundo);
+    color: var(--corTexto);
+}
+
+.todo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 25%;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: rgb(46, 46, 46);
+}
+
+.todo h1{
+    padding-bottom: 1rem;
+}
+
+.todo #form-todo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo input{
+    padding: 0.1rem;
+    margin-bottom: 0.3rem;
+    border-radius: 5px;
+}
+
+.todo button{
+    margin-top: 1rem;
+    color: var(--corTexto);
+    border: 1px solid var(--corDeFundo);
+    border-radius: 1rem;
+    padding: 0.5rem 0.5rem;
+    transition: 0.2s;
+    background-color: var(--corButton);
+}
+
+.todo button:hover{
+    cursor: pointer;
+    border: 2px solid white;
+    transform: scale(1.03);
+    transition: 0.2s;
+}
+
+.todo .line{
+    margin-top: 0.5rem;
+    width: 250px;
+}
+
+.todo .tasks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    gap: 1rem;
+}
+
+.todo .tasks-concluded{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-top: 1.5rem;
+}
+
+@media only screen and (max-width: 600px){
+    .todo .line{
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .todo h1{
+        font-size: 1.3rem;
+    }
+
+    .todo #titulo-tarefa, #duracao{
+        width: 80%;
+    }
+
+    .todo .tasks{
+       font-size: 0.9rem;
+        gap: 1rem;
+    }
+    
+    .todo .tasks-concluded{
+        font-size: 0.9rem;
+    }
+
+    .todo .line{
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .todo h1{
+        font-size: 1.1rem;
+    }
+
+    .todo #titulo-tarefa, #duracao{
+        width: 80%;
+    }
+
+    .todo button{
+        font-size: 0.8rem;
+    }
+
+    .todo .tasks{
+       font-size: 0.7rem;
+        gap: 1rem;
+    }
+    
+    .todo .tasks-concluded{
+        font-size: 0.7rem;
+    }
+
+    .todo .line{
+        width: 130px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .todo h1{
+        font-size: 0.9rem;
+    }
+
+    .todo #titulo-tarefa, #duracao{
+        width: 100%;
+    }
+
+    .todo button{
+        font-size: 0.8rem;
+    }
+
+    .todo .tasks{
+       font-size: 0.7rem;
+        gap: 1rem;
+    }
+    
+    .todo .tasks-concluded{
+        font-size: 0.7rem;
+    }
+
+    .todo .line{
+        width: 120px;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .todo button{
+        font-size: 0.7rem;
+    }
+}
